@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:animations="clr-namespace:CommunityToolkit.Maui.Animations;assembly=CommunityToolkit.Maui"
+             x:Class="DemoMAUIApplication.MainPage">
+
+    <StackLayout>
+        <Image Source="pancake.png"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+        <Slider VerticalOptions="Center"
+                ValueChanged="OnSliderValueChanged" />
+        <Label x:Name="valueLabel"
+               Text="A simple Label"
+               FontSize="18"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+        <Button Text="Order Food!"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Clicked="OnButtonClicked" />
+        <Button Text="Do this!"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                BorderWidth="3"
+                Rotation="-15"
+                TextColor="White"
+                FontSize="24" />
+        <!--<Button Text="Do that!"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                BorderWidth="3"
+                Rotation="0"
+                TextColor="Red"
+                FontSize="24" />-->
+        <Button Text="Click on Animation Page"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                BorderWidth="3"
+                Rotation="0"
+                TextColor="White"
+                FontSize="24" 
+                BackgroundColor="Aqua"
+                Clicked="OnAnimationButtonClicked"/>
+        <Button Text="Brushes"
+          HorizontalOptions="Center"
+          VerticalOptions="Center"
+          BorderWidth="3"
+          Rotation="0"
+          TextColor="White"
+          FontSize="24" 
+          BackgroundColor="Green"
+          Clicked="OnBrushesButtonClicked"/>   
+        <Button Text="Graphics"
+         HorizontalOptions="Center"
+         VerticalOptions="Center"
+         BorderWidth="3"
+         Rotation="0"
+         TextColor="White"
+         FontSize="24" 
+         BackgroundColor="Orange"
+         Clicked="OnGraphicsButtonClicked"/>
+        <Button Text="Menu"
+          HorizontalOptions="Center"
+          VerticalOptions="Center"
+          BorderWidth="3"
+          Rotation="0"
+          TextColor="White"
+          FontSize="24" 
+          BackgroundColor="SaddleBrown"
+          Clicked="OnMenuButtonClicked"/>   
+    </StackLayout>
+
+</ContentPage>

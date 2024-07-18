@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DemoMAUIApplication.BrushesPage"
+             Title="BrushesPage">
+    <VerticalStackLayout>
+        <Frame BorderColor="LightGray"
+       HasShadow="True"
+       CornerRadius="15"
+       HeightRequest="200"
+       WidthRequest="200">
+            <Frame.Background>
+                <!-- StartPoint defaults to (0,0) -->
+                <LinearGradientBrush EndPoint="1,0">
+                    <GradientStop Color="Yellow"
+                          Offset="0.2" />
+                    <GradientStop Color="Green"
+                          Offset="1.0" />
+                </LinearGradientBrush>
+                
+            </Frame.Background>
+                    <Label 
+            Text="Horizontal linear gradient"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />           
+        </Frame>
+        <Frame BorderColor="LightGray"
+       HasShadow="True"
+       CornerRadius="15"
+       HeightRequest="200"
+       WidthRequest="200">
+            <Frame.Background>
+                <!-- StartPoint defaults to (0,0)      
+             Endpoint defaults to (1,1) -->
+                <LinearGradientBrush>
+                    <GradientStop Color="Yellow"
+                          Offset="0.1" />
+                    <GradientStop Color="Green"
+                          Offset="1.0" />
+                </LinearGradientBrush>
+            </Frame.Background>
+            <Label 
+   Text="vertical linear gradient"
+   VerticalOptions="Center" 
+   HorizontalOptions="Center" />
+        </Frame>
+        <Frame BorderColor="LightGray"
+       HasShadow="True"
+       CornerRadius="15"
+       HeightRequest="200"
+       WidthRequest="200">
+            <Frame.Background>
+                <!-- StartPoint defaults to (0,0)      
+             Endpoint defaults to (1,1) -->
+                <LinearGradientBrush>
+                    <GradientStop Color="LightBlue"
+                          Offset="0.1" />
+                    <GradientStop Color="LightGreen"
+                          Offset="1.0" />
+                </LinearGradientBrush>
+            </Frame.Background>
+            <Label 
+        Text="Diagonal linear gradient"
+        VerticalOptions="Center" 
+        HorizontalOptions="Center" />
+        </Frame>
+        <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Frame BorderColor="LightGray"
+                   HasShadow="True"
+                   CornerRadius="12"
+                   HeightRequest="120"
+                   WidthRequest="120">
+                <Frame.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Color="Red" Offset="0.1" />
+                        <GradientStop Color="DarkBlue" Offset="1.0" />
+                    </RadialGradientBrush>
+                </Frame.Background>
+                <Label 
+                    Text="Radial gradient"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center" />
+            </Frame>
+            <Frame BorderColor="LightGray"
+                   HasShadow="True"
+                   CornerRadius="12"
+                   HeightRequest="120"
+                   WidthRequest="120">
+                <Frame.Background>
+                    <RadialGradientBrush Center="0.0,0.0">
+                        <GradientStop Color="Red" Offset="0.1" />
+                        <GradientStop Color="DarkBlue" Offset="1.0" />
+                    </RadialGradientBrush>
+                </Frame.Background>
+            </Frame>
+            <Frame BorderColor="LightGray"
+            HasShadow="True"
+            CornerRadius="12"
+            HeightRequest="120"
+            WidthRequest="120">
+                <Frame.Background>
+                    <RadialGradientBrush Center="1.0,1.0">
+                        <GradientStop Color="Red"
+                  Offset="0.1" />
+                        <GradientStop Color="DarkBlue"
+                  Offset="1.0" />
+                    </RadialGradientBrush>
+                </Frame.Background>
+            </Frame>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

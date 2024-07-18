@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DemoMAUIApplication"
+             x:Class="DemoMAUIApplication.MenuPage"
+             Title="Menu Page">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:MenuPage x:Key="MenuPageContext" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.BindingContext>
+        <StaticResource Key="MenuPageContext" />
+    </ContentPage.BindingContext>
+
+    <CollectionView ItemsSource="{Binding FoodItems}">
+        <CollectionView.ItemsLayout>
+            <GridItemsLayout Orientation="Vertical" Span="2"/>
+        </CollectionView.ItemsLayout>
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Grid Padding="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Image Grid.Row="0" Source="{Binding Image}" Aspect="AspectFill" />
+                    <Label Grid.Row="1" Text="{Binding Name}" FontAttributes="Bold" HorizontalOptions="Center" />
+                    <Label Grid.Row="2" Text="{Binding Price, StringFormat='Price: {0:C}'}" HorizontalOptions="Center" />
+                    <Button Grid.Row="3" Text="Add to Cart" Command="{Binding Source={x:Reference MenuPageContext}, Path=AddToCartCommand}" CommandParameter="{Binding}" />
+                </Grid>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>

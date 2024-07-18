@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="DemoMAUIApplication.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:DemoMAUIApplication"
+    Shell.FlyoutBehavior="Disabled"
+    Title="DemoMAUIApplication">
+
+    <ShellContent
+        Title="Food Application"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage">
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center" Orientation="Horizontal">
+                <Label Text="Food Application" 
+                       HorizontalOptions="CenterAndExpand" 
+                       VerticalOptions="Center"
+                       FontSize="20" 
+                       FontAttributes="Bold"/>
+            </StackLayout>
+    </ShellContent>
+
+</Shell>
